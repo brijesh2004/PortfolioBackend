@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:3000'],
+    origin: ['https://itsmyportfolio-3k11.onrender.com'],
     methods: ['POST', 'GET'],
     allowedHeaders: ["Content-Type", "Authorization"]
   }))
@@ -18,7 +18,7 @@ app.get("/",(req, res)=>{
     res.send("Hello World");
 })
 app.post("/addmessage" ,async (req,res)=>{
-  res.header('Access-Control-Allow-Origin', `http://localhost:3000`);
+  res.header('Access-Control-Allow-Origin', `https://itsmyportfolio-3k11.onrender.com`);
   try{
     const {name , email,message}= req.body;
     if(!email || !name ,!message){
